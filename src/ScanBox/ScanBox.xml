@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="ScanBox.widget.ScanBox" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>ScanBox</name>
+    <description>The description of this widget.</description>
+
+    <icon>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</icon>
+
+    <properties>
+        <property key="scanAttr" type="attribute">
+            <caption>Input attribute</caption>
+            <category>Appearance</category>
+            <description>The background color of the widget.</description>
+            <attributeTypes>
+                <attributeType name="String" />
+                <attributeType name="Integer" />
+            </attributeTypes>
+        </property>
+        <!--<property key="messageString" type="string" required="true" defaultValue="">
+            <caption>Message</caption>
+            <category>Appearance</category>
+            <description>The message visible within the widget.</description>
+        </property>-->
+        <property key="onChangeMF" type="microflow" required="false" defaultValue="">
+            <caption>Onchange Microflow</caption>
+            <category>Behavior</category>
+            <description>Run onchange microflow when the user is done typing.</description>
+            <returnType type="Boolean" />
+        </property>
+        <property key="onChangeNF" type="nanoflow" required="false">
+            <caption>Onchange Nanoflow</caption>
+            <category>Behavior</category>
+            <description>Run onchange nanoflow when the user is done typing.</description>
+            <returnType type="Boolean" />
+        </property>
+        <property key="timeout" type="integer" defaultValue="500">
+            <caption>Time out</caption>
+            <category>Behavior</category>
+            <description>Amount of milliseconds to trigger the onchange microflow and/or nanoflow after users stops typing.</description>
+        </property>
+    </properties>
+</widget>
+
