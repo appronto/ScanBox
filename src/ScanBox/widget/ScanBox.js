@@ -132,19 +132,21 @@ define([
 
         _processValue: function (code) {
             this._contextObj.set(this.scanAttr, code);
-            if (this.onChangeNF) {
-                this._exeNf(this.onChangeNF, this._contextObj.getGuid(), lang.hitch(this, this._processValueCB));
-            }
             if (this.onChangeMF) {
-                this._exeMf(this.onChangeMF, this._contextObj.getGuid(), lang.hitch(this, this._processValueCB));
+                console.log("Run microflow " +this.onChangeMF);
+                this._execMf(this.onChangeMF, this._contextObj.getGuid(), lang.hitch(this, this._processValueCB));
+            } else if (this.onChangeNF) {
+                console.log("Run nanoflow " +this.onChangeNF);
+                this._execNf(this.onChangeNF, this._contextObj.getGuid(), lang.hitch(this, this._processValueCB));
             }
+            
         },
         
         _processValueCB: function(result){
             this.scaninputbox.focus();
         },
 
-        _exeNf: function (nf, guid, cb) {
+        _execNf: function (nf, guid, cb) {
             logger.debug(this.id + "._execNf");
             mx.data.callNanoflow({
                 nanoflow: nf,
